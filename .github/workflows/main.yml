@@ -17,7 +17,11 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '14'
-
+    - name: Initialize npm
+      run: |
+        npm init -y
+        echo "Initialization done!"
+          
     - name: Install Dependencies
       run: npm ci
 
